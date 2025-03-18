@@ -25,16 +25,16 @@ class GameActivity : AppCompatActivity() {
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Get the user's email from the intent
+
         val userEmail = intent.getStringExtra("USER_EMAIL") ?: "Player"
         binding.userLabel.text = userEmail
 
-        // Set up the start button
+
         binding.startButton.setOnClickListener {
             startGame()
         }
 
-        // Set up the ball button
+
         binding.ballButton.setOnClickListener {
             score++
             binding.scoreLabel.text = "Score: $score"
@@ -51,7 +51,7 @@ class GameActivity : AppCompatActivity() {
         binding.timerLabel.text = "$timeRemaining"
         binding.ballButton.visibility = View.VISIBLE
 
-        // Start the timer
+
         timerHandler = Handler(Looper.getMainLooper())
         timerRunnable = object : Runnable {
             override fun run() {
@@ -66,7 +66,7 @@ class GameActivity : AppCompatActivity() {
         }
         timerHandler.post(timerRunnable)
 
-        // Move the ball initially
+
         moveBall()
     }
 
@@ -92,7 +92,7 @@ class GameActivity : AppCompatActivity() {
         timerHandler.removeCallbacks(timerRunnable)
         binding.ballButton.visibility = View.INVISIBLE
 
-        // Show the game over dialog
+
         AlertDialog.Builder(this)
             .setTitle("Game Over")
             .setMessage("Final Score: $score")

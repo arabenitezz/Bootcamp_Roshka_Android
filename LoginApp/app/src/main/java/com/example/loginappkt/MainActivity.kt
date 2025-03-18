@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             if (validateInput(email, password)) {
                 Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, GameActivity::class.java)
-                intent.putExtra("USER_EMAIL", email) // Pass the email
+                intent.putExtra("USER_EMAIL", email)
                 startActivity(intent)
                 finish()
             }
