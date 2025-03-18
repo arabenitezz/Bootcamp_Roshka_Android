@@ -1,5 +1,6 @@
 package com.example.loginappkt
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
 
             if (validateInput(email, password)) {
                 Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, GameActivity::class.java)
+                intent.putExtra("USER_EMAIL", email) // Pass the email
+                startActivity(intent)
+                finish()
             }
         }
     }
