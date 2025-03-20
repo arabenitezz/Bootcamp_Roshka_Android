@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Practicas_Compose"
         tools:targetApi="31">
         <activity
+            android:name=".Cuadrantes"
+            android:exported="false"
+            android:label="@string/title_activity_cuadrantes"
+            android:theme="@style/Theme.Practicas_Compose" />
+        <activity
             android:name=".AdministradorTareas"
             android:exported="false"
             android:label="@string/title_activity_administrador_tareas"
