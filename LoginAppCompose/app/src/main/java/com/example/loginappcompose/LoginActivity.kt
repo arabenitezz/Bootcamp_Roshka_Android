@@ -31,7 +31,7 @@ fun LoginScreen(navController: NavController) {
             value = email,
             onValueChange = {
                 email = it
-                
+
                 if (errorMessage != null) errorMessage = null
             },
             label = { Text("Email") },
@@ -46,12 +46,12 @@ fun LoginScreen(navController: NavController) {
             value = password,
             onValueChange = {
                 password = it
-                // Clear error when user types
+
                 if (errorMessage != null) errorMessage = null
             },
             label = { Text("Password") },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-            visualTransformation = PasswordVisualTransformation(), // Hide password
+            visualTransformation = PasswordVisualTransformation(),
             isError = errorMessage != null,
             modifier = Modifier.fillMaxWidth()
         )
@@ -68,7 +68,7 @@ fun LoginScreen(navController: NavController) {
                 if (validateInput(email, password)) {
                     navController.navigate("game/$email")
                 } else {
-                    errorMessage = "Invalid email or password (min 6 characters)"
+                    errorMessage = "Email o contraseña invalidos (min 6 caracteres)"
                 }
             },
             modifier = Modifier.fillMaxWidth()
