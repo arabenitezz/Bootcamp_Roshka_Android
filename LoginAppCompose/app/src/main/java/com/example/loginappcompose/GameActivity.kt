@@ -49,7 +49,7 @@ fun GameScreen(email: String) {
             isGameRunning = false
             AlertDialog.Builder(context)
                 .setTitle("Game Over")
-                .setMessage("Final Score: $score")
+                .setMessage("Puntuacion final: $score")
                 .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
                 .show()
         }
@@ -59,11 +59,11 @@ fun GameScreen(email: String) {
         modifier = Modifier.fillMaxSize().padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Player: $email", style = MaterialTheme.typography.headlineSmall)
+        Text(text = "Jugador: $email", style = MaterialTheme.typography.headlineSmall)
         Spacer(modifier = Modifier.height(8.dp))
-        Text(text = "Time: $timeRemaining", style = MaterialTheme.typography.bodyLarge)
+        Text(text = "Tiempo: $timeRemaining", style = MaterialTheme.typography.bodyLarge)
         Spacer(modifier = Modifier.height(8.dp))
-        Text(text = "Score: $score", style = MaterialTheme.typography.bodyLarge)
+        Text(text = "Puntaje: $score", style = MaterialTheme.typography.bodyLarge)
         Spacer(modifier = Modifier.height(16.dp))
 
         Box(
@@ -97,7 +97,7 @@ fun GameScreen(email: String) {
             },
             enabled = !isGameRunning
         ) {
-            Text(if (isGameRunning) "Game Running" else "Start Game")
+            Text(if (isGameRunning) "Juego en curso" else "Empezar")
         }
     }
 }

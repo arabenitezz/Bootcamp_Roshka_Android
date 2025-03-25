@@ -31,7 +31,7 @@ fun LoginScreen(navController: NavController) {
             value = email,
             onValueChange = {
                 email = it
-                // Clear error when user types
+                
                 if (errorMessage != null) errorMessage = null
             },
             label = { Text("Email") },
