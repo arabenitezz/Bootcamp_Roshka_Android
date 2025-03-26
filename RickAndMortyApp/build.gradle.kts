@@ -1,6 +1,8 @@
 buildscript{
     dependencies{
-        classpath(libs.hilt.android.gradle.plugin)
+        classpath (libs.hilt.android.gradle.plugin)
+        classpath (libs.gradle)
+        classpath (libs.hilt.android.gradle.plugin.v2561)
     }
 }
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
