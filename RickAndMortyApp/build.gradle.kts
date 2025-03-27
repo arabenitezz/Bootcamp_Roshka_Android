@@ -1,10 +1,14 @@
 buildscript{
     dependencies{
+
+        classpath ("com.google.dagger:hilt-android-gradle-plugin:2.44")
+        classpath ("com.android.tools.build:gradle:8.9.1")  // Check for the latest stable version
         classpath ("com.google.dagger:hilt-android-gradle-plugin:2.56.1")
-        classpath ("com.android.tools.build:gradle:7.4.1")
-        classpath ("com.google.dagger:hilt-android-gradle-plugin:2.56.1")
+
     }
 }
+
+
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false

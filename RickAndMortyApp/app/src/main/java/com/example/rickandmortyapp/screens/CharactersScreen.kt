@@ -29,7 +29,7 @@ fun CharactersScreen(
 {
     val state by viewModel.state.collectAsState()
     Log.d("Cant. items", "${state.size}")
-    LazyColumn {
+    LazyColumn (){
         items(state) {
             character->
             CharacterCard(character)

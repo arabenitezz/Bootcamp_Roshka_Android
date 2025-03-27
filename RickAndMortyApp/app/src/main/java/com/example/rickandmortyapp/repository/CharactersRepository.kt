@@ -5,9 +5,6 @@ import com.example.rickandmortyapp.model.CharactersList
 import javax.inject.Inject
 
 class CharactersRepository @Inject constructor(
-    private val charactersApi: CharactersApi
-) {
-    suspend fun getCharacters() : CharactersList {
-        return charactersApi.getCharacters()
-    }
+    private val api: CharactersApi) {
+    suspend fun getCharacters(page: Int): CharactersList = api.getCharacter(page)
 }
